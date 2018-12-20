@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.2/engine/Shopware/Components/Plugin/schema/config.xsd">
+    <elements>
+        <element required="false" type="select" scope="locale">
+            <name>create_on_login</name>
+            <label lang="de">Unbekannte Nummern als Kunden anlegen</label>
+            <label lang="en">Create customer for unkown numbers</label>
+            <value>no</value>
+            <store>
+                <option>
+                    <value>yes</value>
+                    <label lang="DE">ja, automatisch anlegen</label>
+                    <label lang="EN">yes, auto-create</label>
+                </option>
+                <option>
+                    <value>no</value>
+                    <label lang="DE">nein</label>
+                    <label lang="EN">no</label>
+                </option>
+            </store>
+        </element>
+        <element required="false" type="select" scope="locale">
+            <name>create_on_login_overdue</name>
+            <label lang="de">Überschreitung erlauben bei automatischer Benutzererzeugung</label>
+            <label lang="en">Overdue on auto customer-create</label>
+            <value>no</value>
+            <store>
+                <option>
+                    <value>yes</value>
+                    <label lang="DE">ja</label>
+                    <label lang="EN">yes</label>
+                </option>
+                <option>
+                    <value>no</value>
+                    <label lang="DE">nein</label>
+                    <label lang="EN">no</label>
+                </option>
+            </store>
+        </element>
+        <element required="false" type="text" scope="locale">
+            <name>status_id</name>
+            <label lang="de">Order-Clear Status</label>
+            <label lang="en">Order-clear state</label>
+            <value>2</value>
+            <description lang="de">Beim Clearing der Bestellungen wird auf diesen Status gewechselt</description>
+            <description lang="en">Switch to this state on orders-clearing</description>
+        </element>
+        <element required="false" type="select" scope="locale">
+            <name>hpr_pos_print_mm</name>
+            <label lang="de">Bon-Drucker Druckbreite</label>
+            <label lang="en">Receipt printing-width</label>
+            <value>210</value>
+            <store>
+                <option>
+                    <value>210</value>
+                    <label lang="DE">DIN A4</label>
+                    <label lang="EN">DIN A4 (21cm)</label>
+                </option>
+                <option>
+                    <value>148</value>
+                    <label lang="DE">DIN A5</label>
+                    <label lang="EN">DIN A5 (14.8mm)</label>
+                </option>
+                <option>
+                    <value>48</value>
+                    <label lang="DE">48mm Bon</label>
+                    <label lang="EN">48mm Receipt</label>
+                </option>
+                <option>
+                    <value>50</value>
+                    <label lang="DE">50mm Bon</label>
+                    <label lang="EN">50mm Receipt</label>
+                </option>
+                <option>
+                    <value>58</value>
+                    <label lang="DE">58mm Bon</label>
+                    <label lang="EN">58mm Receipt</label>
+                </option>
+                <option>
+                    <value>80</value>
+                    <label lang="DE">80mm Bon</label>
+                    <label lang="EN">80mm Receipt</label>
+                </option>
+            </store>
+        </element>
+        <element required="false" type="html" scope="locale">
+            <name>print_header</name>
+            <label lang="de">Kassenbon-Kopfzeile</label>
+            <label lang="en">Receipt header</label>
+        </element>
+        <element required="false" type="html" scope="locale">
+            <name>print_footer</name>
+            <label lang="de">Kassenbon-Fusszeile</label>
+            <label lang="en">Receipt footer</label>
+        </element>
+        <element required="false" type="text" scope="locale">
+            <name>template_receipt</name>
+            <label lang="de">Alternatives Bon-Template</label>
+            <label lang="en">Alternative receipt-template</label>
+        </element>
+    </elements>
+</config>

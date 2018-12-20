@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="hpr_pos_customer_service" class="HPrPrepaidCardPOS\Components\POSCustomerService">
+            <tag name="service" />
+            <argument type="service" id="shopware.plugin.config_reader"/>
+            <argument type="service" id="dbal_connection"/>
+        </service>
+        <service id="hpr_pos_order_service" class="HPrPrepaidCardPOS\Components\POSOrdersService">
+            <tag name="service" />
+            <argument type="service" id="shopware.plugin.config_reader"/>
+            <argument type="service" id="dbal_connection"/>
+            <argument type="service" id="hpr_pos_customer_service"/>
+        </service>
+    </services>
+</container>

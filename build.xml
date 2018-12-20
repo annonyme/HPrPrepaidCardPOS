@@ -1,0 +1,32 @@
+<project name="build ShopwarePlugin-Zip" default="zip">
+    <target name="copy">
+        <basename property="pluginname" file="${basedir}"/>
+
+        <mkdir dir="./tmp/building/${pluginname}/${pluginname}"/>
+
+        <copy todir="./tmp/building/${pluginname}/${pluginname}" overwrite="true">
+            <fileset dir=".">
+                <exclude name="build.xml" />
+                <exclude name="${pluginname}.zip" />
+                <exclude name=".git/**" />
+                <exclude name=".svn/**" />
+                <exclude name="tmp/**" />
+            	<exclude name=".settings/**" />
+            	<exclude name=".buildpath" />
+            	<exclude name=".project" />
+            	<exclude name="README.md" />
+            </fileset>
+        </copy>
+
+        <touch>
+            <fileset dir="./tmp/building/${pluginname}">
+                <include name="**" />
+            </fileset>
+        </touch>
+    </target>
+
+    <target name="zip" depends="copy">
+        <zip destfile="${pluginname}.zip" basedir="./tmp/building/${pluginname}"/>
+        <delete dir="./tmp"/>
+    </target>
+</project>

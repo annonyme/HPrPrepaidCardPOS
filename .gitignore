@@ -1,0 +1,6 @@
+/tmp
+.buildpath
+.settings/
+.project
+*.zip
+/.idea

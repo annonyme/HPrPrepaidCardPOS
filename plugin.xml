@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/5.2/engine/Shopware/Components/Plugin/schema/plugin.xsd">
+    <label lang="de">Guthaben-Karte POS</label>
+    <label lang="en">Prepaid-card POS</label>
+
+    <version>1.2.3</version>
+    <link>https://www.hannespries.de</link>
+    <author>Hannes Pries</author>
+    <compatibility minVersion="5.3.0" />
+
+    <changelog version="1.0">
+        <changes lang="de">Login via Kundennummer; Aufladen von Guthaben; Abrechnen von Guthaben bei Bestellungen; Löschen von Guthaben;</changes>
+        <changes lang="en">Login with customernumber; fill balance; pay by balance on orders; clear balance;</changes>
+    </changelog>
+    <changelog version="1.1">
+        <changes lang="de">Vordefinierte Freittextfelder; Redirects;</changes>
+        <changes lang="en">Predefined attr-fields; redirects;</changes>
+    </changelog>
+    <changelog version="1.1.1">
+        <changes lang="de">Fixes; Exceptions;</changes>
+        <changes lang="en">Fixes; Exceptions;</changes>
+    </changelog>
+    <changelog version="1.2">
+        <changes lang="de">Quittung drucken; Benutzer automatisch anlegen;</changes>
+        <changes lang="en">Print invoices; Auto-create customers;</changes>
+    </changelog>
+    <changelog version="1.2.1">
+        <changes lang="de">Attributes anlegen, falls diese fehlen;</changes>
+        <changes lang="en">Add attributes if missing;</changes>
+    </changelog>
+    <changelog version="1.2.2">
+        <changes lang="de">CSS3 printing profiles A4, A5, 48mm, 50mm, 58mm, 80mm;</changes>
+        <changes lang="en">CSS3 printing profiles A4, A5, 48mm, 50mm, 58mm, 80mm;</changes>
+    </changelog>
+    <changelog version="1.2.3">
+        <changes lang="de">Alternatives Bon-Template; Close-Button;</changes>
+        <changes lang="en">alternative receipt-template; Close-Button;</changes>
+    </changelog>
+</plugin>
